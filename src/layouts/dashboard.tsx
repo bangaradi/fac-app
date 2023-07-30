@@ -15,51 +15,7 @@ export default function Dashboard(props: {
 
     const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
     const { t } = useTranslation()
-    const sidebarItems = [
-        {
-            title: t('sidebar.dashboard'),
-            icon: 'i-carbon-dashboard',
-            path: '/dashboard'
-        },
-        {
-            title: t('sidebar.components'),
-            icon: 'i-carbon-assembly-cluster',
-            path: '/components/buttons',
-            children: [
-                {
-                    title: 'Buttons',
-                    path: '/components/buttons'
-                },
-                {
-                    title: 'Cards',
-                    path: '/components/cards'
-
-
-                },
-            ]
-        },
-        {
-            title: t('sidebar.team'),
-            icon: 'i-carbon-collaborate',
-            path: '/team'
-        },
-        {
-            title: t('sidebar.projects'),
-            icon: 'i-carbon-document',
-            path: '/projects'
-        },
-        {
-            title: t('sidebar.calendar'),
-            icon: 'i-carbon-calendar',
-            path: '/calendar'
-        },
-        {
-            title: t('sidebar.reports'),
-            icon: 'i-carbon-report-data',
-            path: '/reports'
-        },
-
-    ]
+    const sidebarItems = [ ]
 
     const [currentIndex, setCurrentIndex] = useState(-1);
 
