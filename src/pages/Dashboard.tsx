@@ -82,8 +82,26 @@ export default function About() {
     useEffect(() => {
         if(localStorage.getItem('AuthToken') == null){
             navigate('/')
-        }
+        }       
     }, [])
+    
+    /*this.setState({
+        MonthlyDifference: parseInt(MonthlyDifference)
+    }, () => {
+        this.setState({
+            MonthlyDifference: MonthlyDifference
+        })
+    })*/
+    
+    /*function Difference(x: number){
+        if(isNaN(x)){
+            return;
+        }
+        else MonthlyDifference
+    }*/
+    
+    
+  
 
     return (
         <Dashboard >
