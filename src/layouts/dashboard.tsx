@@ -133,8 +133,8 @@ export default function Dashboard(props: {
 
                 </div>
             </aside> */}
-            <div className={`w-full  relative transition-padding duration-700 pl-0 ${sidebarCollapsed?'md:pl-16 rtl:pl-0 md:rtl:pr-16':'rtl:pl-0 md:rtl:pr-64 md:pl-64'}`}>
-                <header className={`${sidebarCollapsed?'md:pl-20 md:rtl:pr-20':'pl-0 rtl:pl-2 md:rtl:pr-40 md:rtl:pr-72 md:pl-72'} pr-0 pl-2 transition-padding duration-700 w-full md:fixed right-0 z-20 flex flex-col items-center justify-center md:justify-between  px-4 py-2 space-y-2 shadow-md  md:py-0 md:space-y-none md:h-16 md:flex-row bg-slate-100 dark:bg-primary-900`}>
+            <div className={`w-full  relative transition-padding duration-700 pl-0 md:pl-16 rtl:pl-0 md:rtl:pr-16`}>
+                <header className={`md:pl-20 md:rtl:pr-20 pr-0 pl-2 transition-padding duration-700 w-full md:fixed right-0 z-20 flex flex-col items-center justify-center md:justify-between  px-4 py-2 space-y-2 shadow-md  md:py-0 md:space-y-none md:h-16 md:flex-row bg-slate-100 dark:bg-primary-900`}>
                     <div className="hidden md:block">
                         {/* <button
                             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
