@@ -57,7 +57,8 @@ const LineComponent = ({stockName, set30DayDifference}) => {
                 }
             });
             setStocksList(stocksListTemp);
-            set30DayDifference(parseInt(Number(dataTemp[dataTemp.length-1]-dataTemp[0])));
+            var Diff: any = parseInt(Number(dataTemp[dataTemp.length-1]-dataTemp[0]));
+            if(!Number.isNaN(Diff)){set30DayDifference(Diff);}
         }).catch((error:any) => {
             console.log("error", error);
         });

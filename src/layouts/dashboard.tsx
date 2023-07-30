@@ -15,51 +15,7 @@ export default function Dashboard(props: {
 
     const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
     const { t } = useTranslation()
-    const sidebarItems = [
-        {
-            title: t('sidebar.dashboard'),
-            icon: 'i-carbon-dashboard',
-            path: '/dashboard'
-        },
-        {
-            title: t('sidebar.components'),
-            icon: 'i-carbon-assembly-cluster',
-            path: '/components/buttons',
-            children: [
-                {
-                    title: 'Buttons',
-                    path: '/components/buttons'
-                },
-                {
-                    title: 'Cards',
-                    path: '/components/cards'
-
-
-                },
-            ]
-        },
-        {
-            title: t('sidebar.team'),
-            icon: 'i-carbon-collaborate',
-            path: '/team'
-        },
-        {
-            title: t('sidebar.projects'),
-            icon: 'i-carbon-document',
-            path: '/projects'
-        },
-        {
-            title: t('sidebar.calendar'),
-            icon: 'i-carbon-calendar',
-            path: '/calendar'
-        },
-        {
-            title: t('sidebar.reports'),
-            icon: 'i-carbon-report-data',
-            path: '/reports'
-        },
-
-    ]
+    const sidebarItems = [ ]
 
     const [currentIndex, setCurrentIndex] = useState(-1);
 
@@ -80,7 +36,7 @@ export default function Dashboard(props: {
     return <div className='h-full'>
 
         <div className='flex flex-col w-full overflow-x-hidden text-slate-700 dark:text-slate-50 bg-gray-50 dark:bg-primary-800' >
-            <aside className={`${sidebarCollapsed ? 'md:w-16' : 'md:w-64'} bg-primary-600 dark:bg-primary-700 transition-width duration-700 w-full top-0 md:fixed bottom-0 z-30 flex-shrink-0   overflow-y-auto  lg:block`}>
+            {/* <aside className={`${sidebarCollapsed ? 'md:w-16' : 'md:w-64'} bg-primary-600 dark:bg-primary-700 transition-width duration-700 w-full top-0 md:fixed bottom-0 z-30 flex-shrink-0   overflow-y-auto  lg:block`}>
                 <div className='flex flex-col h-full'>
                     <div className='flex items-center justify-center h-16 text-5xl bg-primary-900 '>
                         <img className='w-auto h-16' src={logo} alt='logo' />
@@ -119,7 +75,7 @@ export default function Dashboard(props: {
                             </ul>
 
                         </nav>
-                    </div>
+                    </div> */}
                 {/* </div> */}
                 {/* <div className='absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-800'> */}
                     {/* <div className="flex items-center justify-around w-full h-full space-x-2 text-xl text-white"> */}
@@ -131,10 +87,10 @@ export default function Dashboard(props: {
                     {/* </div> */}
 
 
-                </div>
-            </aside>
-            <div className={`w-full  relative transition-padding duration-700 pl-0 ${sidebarCollapsed?'md:pl-16 rtl:pl-0 md:rtl:pr-16':'rtl:pl-0 md:rtl:pr-64 md:pl-64'}`}>
-                <header className={`${sidebarCollapsed?'md:pl-20 md:rtl:pr-20':'pl-0 rtl:pl-2 md:rtl:pr-40 md:rtl:pr-72 md:pl-72'} pr-0 pl-2 transition-padding duration-700 w-full md:fixed right-0 z-20 flex flex-col items-center justify-center md:justify-between  px-4 py-2 space-y-2 shadow-md  md:py-0 md:space-y-none md:h-16 md:flex-row bg-slate-100 dark:bg-primary-900`}>
+                {/* </div>
+            </aside> */}
+            <div className={`w-full  relative transition-padding duration-700 pl-0 md:pl-16 rtl:pl-0 md:rtl:pr-16`}>
+                <header className={`md:pl-20 md:rtl:pr-20 pr-0 pl-2 transition-padding duration-700 w-full md:fixed right-0 z-20 flex flex-col items-center justify-center md:justify-between  px-4 py-2 space-y-2 shadow-md  md:py-0 md:space-y-none md:h-16 md:flex-row bg-slate-100 dark:bg-primary-900`}>
                     <div className="hidden md:block">
                         {/* <button
                             onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
